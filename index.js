@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const userInput = (input, regex, blankError, inputError) => {
     if (!input) {
@@ -109,7 +110,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'project',
+        name: 'projectTitle',
         message: 'What is the title of your project? (Required)',
         validate: projectInput => projectName(projectInput),
     },
@@ -169,11 +170,31 @@ const questions = [
 const promptUser = () => inquirer.prompt(questions);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = readmeFile => {
+    return new Promise ((resolve, reject) => {
+        fs.writeFile('./dist/README.md', readmeFile, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            else{
+                resolve({
+                    ok: true,
+                    message: 'README created!',
+                });
+            }
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 const init = () => {
-    promptUser();
+    promptUser()
+        .then(data => {
+            console.log(data);
+            return generateMarkdown(data);
+        })
+        .then(writeToFile);
 }
 
 // Function call to initialize app
