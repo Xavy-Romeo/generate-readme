@@ -1,7 +1,8 @@
-# jay is best
+# Jay is Best 
+  ![APM](https://img.shields.io/apm/l/npm)
     
   ## Description
-  #### jay is best
+  #### Jay is always the best.
   <br>  
   
   ## Table of Contents
@@ -15,14 +16,22 @@
   <br>
 
   ## Installation
-  #### install 1
+  #### Install by test 1.
   <br>
   
   ## Usage
-  #### use 1
+  #### Use by test 1.
   <br>
 
   ## License
+  
+  MIT License
+
+  Copyright (c) 2021 undefined undefined
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy...
+    
+  View entire license here: https://choosealicense.com/licenses/mit/
   <br>
 
   ## Contributing
@@ -33,10 +42,9 @@
 
   ## Questions
   #### Any questions, contact me by email or visit my GitHub: 
-  #### Email: jayvaz@gmail.com
+  #### Email: jayvaz@test.com
   #### GitHub: github.com/Xavy-Romeo
   <br> 
   
   ## Author
-  #### jay vaz
-  
+  #### Jay Vaz

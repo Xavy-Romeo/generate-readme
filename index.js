@@ -133,6 +133,18 @@ const questions = [
         validate: usageInput => usage(usageInput),
     },
     {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license from the list.',
+        choices: ['NONE', 'MIT', 'GNU (General Public License)'],
+        validate: input => {
+            if (!input) {
+                return false;
+            }
+            return true;
+        }
+    },
+    {
         type: 'confirm',
         name: 'confirmContributing',
         message: 'Would you like others to contribute to your application or package?',
@@ -158,13 +170,6 @@ const questions = [
         when: ({confirmTests}) => confirmTests,
         validate: testsInput => tests(testsInput),
     },
-    {
-        type: 'checkbox',
-        name: 'license',
-        message: 'Choose a license from the list.',
-        choices: ['test1', 'test2'],
-    }
-
 ];
 
 const promptUser = () => inquirer.prompt(questions);
@@ -198,24 +203,3 @@ const init = () => {
 
 // Function call to initialize app
 init();
-
-
-
-// WHEN I enter my project title
-// THEN this is displayed as the title of the README
-// WHEN I enter a description, installation instructions, usage information,
-     // contribution guidelines, and test instructions
-// THEN this information is added to the sections of the README entitled 
-     // Description, Installation, Usage, Contributing, and Tests
-// WHEN I choose a license for my application from a list of options
-// THEN a badge for that license is added near the top of the README and a 
-     // notice is added to the section of the README entitled License that 
-     // explains which license the application is covered under
-// WHEN I enter my GitHub username
-// THEN this is added to the section of the README entitled Questions, with 
-     // a link to my GitHub profile
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with 
-     // instructions on how to reach me with additional questions
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README
