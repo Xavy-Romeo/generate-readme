@@ -1,8 +1,8 @@
-# Jay is Best 
+# Enter title here example1 
   ![APM](https://img.shields.io/apm/l/npm)
     
   ## Description
-  #### Jay is always the best.
+  #### Enter description of example`
   <br>  
   
   ## Table of Contents
@@ -16,11 +16,11 @@
   <br>
 
   ## Installation
-  #### Install by test 1.
+  #### Enter how to install program here
   <br>
   
   ## Usage
-  #### Use by test 1.
+  #### Enter usage examples here
   <br>
 
   ## License
@@ -35,16 +35,18 @@
   <br>
 
   ## Contributing
+  #### Enter contribution guidelines here
   <br>
 
   ## Tests
+  #### Enter tests here
   <br>
 
   ## Questions
   #### Any questions, contact me by email or visit my GitHub: 
-  #### Email: jayvaz@test.com
+  #### Email: jay@test.com
   #### GitHub: github.com/Xavy-Romeo
   <br> 
   
   ## Author
-  #### Jay Vaz
+  #### Javier Vazquez
